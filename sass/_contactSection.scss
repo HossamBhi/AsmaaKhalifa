@@ -1,0 +1,39 @@
+@import "_colors";
+
+// contact section
+.contact-section {
+  padding-top: 23px;
+  .contact-info {
+    text-align: center;
+    padding-bottom: 40px;
+  }
+  img {
+    max-width: 40%;
+    margin-bottom: 25px;
+    border-radius: 50%;
+  }
+  .contact-mail {
+    display: block;
+    color: $primary3;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Relaway";
+  }
+}
+
+@media (min-width: 961px) {
+  .contact-section {
+    padding-top: 23px;
+    .contact-info {
+      text-align: center;
+      padding-bottom: 40px;
+    }
+    img {
+      width: 250px;
+      height: 250px;
+    }
+    .contact-mail {
+      font-size: 30px;
+    }
+  }
+}

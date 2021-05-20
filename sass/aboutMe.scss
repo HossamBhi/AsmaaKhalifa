@@ -1,0 +1,230 @@
+@import "_colors";
+@import "_global";
+@import "_navbar";
+@import "_contactSection";
+@import "_footer";
+
+#content {
+  padding-top: 54px;
+}
+
+.section-title {
+  padding-bottom: 20.5px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 25px;
+  color: $primary3;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 20.5px;
+  font-family: "Vollkorn";
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 2px;
+    background-color: $primary1;
+    width: 50px;
+  }
+}
+
+.links {
+  font-size: 11px;
+  padding: 6px 12px 39px 12px;
+  padding-top: 6px;
+  text-transform: uppercase;
+  a {
+    color: black;
+    font-family: "Relaway";
+  }
+}
+
+.link-active {
+  color: $primary1;
+}
+
+// about me
+.about-me {
+  .about-text {
+    padding: 22px 20px 40px 20px;
+    background-color: #f6f9f8;
+    box-shadow: 0 1px 5px 1px rgba(17, 15, 15, 0.29);
+    p {
+      color: #575656;
+      font-size: 12px;
+      font-size: 12px;
+      letter-spacing: 0;
+      line-height: 15px;
+      text-align: center;
+      font-family: "Relaway";
+    }
+  }
+}
+
+.education {
+  padding-top: 25px;
+  padding-bottom: 20px;
+  background-color: #ebebeb;
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.45);
+  padding-right: 20px;
+  .list-container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin-left: 48px;
+  }
+  .list-line {
+    width: 2px;
+    background-color: $primary1;
+    margin-bottom: 20%;
+    border: 2px solid #04acb5;
+    position: absolute;
+    left: -4px;
+    z-index: 10;
+    height: 90%;
+  }
+  .education-list {
+    margin-left: 26px;
+    margin-right: 20px;
+    margin-top: 10px;
+  }
+  .education-item {
+    position: relative;
+    &:last-child {
+      .education-info {
+        margin-bottom: 0;
+      }
+    }
+    .education-info {
+      margin-bottom: 60px;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+      padding: 22px 20px 18px 20px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -48px;
+      top: 4px;
+      width: 42px;
+      height: 42px;
+      background-image: url("/img/check.png");
+      z-index: 10;
+      background-position: center;
+      background-size: cover;
+    }
+
+    &:last-child {
+      margin-bottom: 20px;
+    }
+  }
+  .education-header {
+    color: $primary3;
+    font-size: 14px;
+    font-family: "Relaway";
+    letter-spacing: 0;
+    line-height: 17px;
+    font-weight: 600;
+  }
+  .education-note {
+    color: $primary3;
+    font-size: 12px;
+    letter-spacing: 0;
+    line-height: 15px;
+    margin-top: 10px;
+    padding-inline-start: 2px;
+    font-family: "Relaway";
+  }
+}
+
+@media (min-width: 961px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+  .section-title {
+    font-size: 30px;
+  }
+  .links {
+    display: none;
+  }
+  // about me
+  .about-me {
+    .about-me-top {
+      background-color: #f6f9f8;
+      box-shadow: 0 2px 5px 1px rgba(17, 15, 15, 0.45);
+      padding-top: 79px;
+    }
+    .about-text {
+      box-shadow: none;
+      padding-bottom: 50px;
+      padding-left: 94px;
+      padding-right: 94px;
+      p {
+        font-size: 18px;
+        letter-spacing: 0;
+        font-family: "Raleway";
+        line-height: 21px;
+      }
+    }
+
+    .list-line {
+      left: 50%;
+      right: 50%;
+      transform: translate(-50%);
+      height: 100%;
+    }
+    .education {
+      padding: 75px;
+      .list-container {
+        margin: 0px;
+        padding-top: 16px;
+      }
+      .education-list {
+        margin: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      .education-info {
+        margin-bottom: 0px;
+        width: 80%;
+        background-color: $primary2;
+        padding: 33px 37px 37px 37px;
+      }
+      .education-item {
+        width: 50%;
+        margin-bottom: 58.5px;
+        &:first-child {
+          margin-top: 10px;
+        }
+
+        &:last-child {
+          .education-info {
+            margin-bottom: 0;
+          }
+        }
+        &:nth-child(odd) {
+          align-self: flex-end;
+          padding-left: 65px;
+          &::before {
+            left: -21px;
+            right: auto;
+          }
+        }
+        &:nth-child(even) {
+          align-self: flex-start;
+          padding-right: 65px;
+          &::before {
+            left: auto;
+            right: -21px;
+          }
+        }
+      }
+    }
+  }
+  .contact-section {
+    background-color: #f6f9f8;
+  }
+}

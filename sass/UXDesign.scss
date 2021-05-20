@@ -1,0 +1,374 @@
+@import "_colors";
+@import "_global";
+@import "_navbar";
+@import "_contactSection";
+@import "_footer";
+
+#content {
+  padding-top: 54px;
+}
+
+.section-title {
+  padding-bottom: 21px;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 25px;
+  color: $primary3;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 20px;
+  font-family: "vollkorn";
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 2px;
+    background-color: $primary1;
+    width: 50px;
+  }
+}
+
+.links {
+  font-size: 11px;
+  padding: 6px 10px 29px 10px;
+  padding-top: 6px;
+  text-transform: uppercase;
+  a {
+    color: black;
+    font-family: "Relaway";
+  }
+}
+
+.link-active {
+  color: $primary1;
+}
+
+// UX section
+.UX-section {
+  font-family: "Relaway";
+  .UX-image-container {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .UX-image {
+    background-image: url("../img/UX\ DESIGN\ CARD\ 1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.45);
+    background-color: #ebebeb;
+    height: 300px;
+  }
+}
+
+.detail-row {
+  width: 100%;
+  .detail-header {
+    color: $primary3;
+    font-size: 14px;
+    letter-spacing: 0;
+    padding-bottom: 11px;
+    font-weight: 700;
+  }
+  .detail-text {
+    color: $primary3;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .row-img {
+    width: 100%;
+  }
+}
+
+.detail-container-1 {
+  padding: 30px 10px 20px 10px;
+  .detail-section {
+    padding: 0px 11px 6px 11px;
+  }
+}
+
+.detail-container-2 {
+  padding: 6px 10px 6px 10px;
+  .detail-section {
+    margin-bottom: 10px;
+    border-radius: 0 20px 20px 0;
+    background-color: #ebebeb;
+    padding: 20px 11px 6px 11px;
+  }
+}
+
+// section 3
+.detail-container-3 {
+  background-color: #d8d8d8;
+  padding: 25px 20px;
+  .detail-top {
+    display: flex;
+    justify-content: center;
+  }
+  .detail-header {
+    text-align: center;
+  }
+}
+
+.detail-container-4 {
+  padding: 20px;
+  .detail-left {
+    padding-bottom: 20px;
+  }
+}
+.detail-container-5 {
+  padding: 25px 20px;
+  background-color: $greyscale2;
+}
+
+.detail-container-6 {
+  padding: 20px 10px;
+  .detail-header {
+    padding-left: 4px;
+  }
+}
+
+.detail-container-7 {
+  padding: 20px 10px;
+  background-color: $greyscale2;
+  .detail-header {
+    padding-left: 4px;
+  }
+}
+
+.detail-container-8 {
+  padding: 20px;
+  .detail-img-container {
+    padding-left: 4px;
+    padding-top: 14px;
+  }
+  .detail-img {
+    background-image: url("../img/UserFlow\ mobile.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 400px;
+  }
+}
+
+.detail-container-9 {
+  padding: 20px 10px;
+  background-color: $greyscale2;
+  .detail-header {
+    padding-left: 4px;
+  }
+  .detail-img-container {
+    padding-left: 4px;
+    padding-top: 14px;
+  }
+  .detail-img {
+    background-image: url("../img/wireframes\ mobile.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 400px;
+  }
+}
+
+.mob {
+  display: block;
+}
+.lap {
+  display: none;
+}
+
+@media (min-width: 961px) {
+  $rowWidth: 85%;
+
+  #content {
+    padding-top: 75px;
+  }
+  .links {
+    display: none;
+  }
+  .section-title {
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 42px;
+  }
+  .UX-section {
+    padding-top: 88px;
+    .UX-image {
+      width: $rowWidth;
+      margin: 0 auto;
+      background-image: url("../img/UX\ DESIGN\ \(1\)-1.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.45);
+      background-color: #ebebeb;
+      height: 475px;
+    }
+    .UX-image-container {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
+
+  .detail-row {
+    width: 100%;
+    .detail-header {
+      font-size: 21px;
+      font-weight: bold;
+      letter-spacing: 0;
+      line-height: 25px;
+    }
+    .detail-text {
+      font-size: 16px;
+      letter-spacing: 0;
+      line-height: 18px;
+    }
+  }
+
+  .detail-container-1,
+  .detail-container-2 {
+    width: $rowWidth;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .detail-container-1 {
+    padding-bottom: 30px;
+    .detail-section {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .detail-header {
+      font-size: 36px;
+      font-weight: bold;
+      letter-spacing: 0;
+      line-height: 42px;
+    }
+    .detail-text {
+      font-size: 18px;
+      letter-spacing: 0;
+      line-height: 21px;
+    }
+  }
+
+  .detail-container-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 73px;
+    .detail-section {
+      width: (100%/3.1);
+      padding: 35px 30px 35px 30px;
+    }
+    .detail-header {
+      font-size: 21px;
+      font-weight: bold;
+      letter-spacing: 0;
+      line-height: 25px;
+    }
+    .detail-text {
+      font-size: 18px;
+      letter-spacing: 0;
+      line-height: 21px;
+    }
+  }
+  .detail-container-3 {
+    width: $rowWidth;
+    position: relative;
+    border: 1px solid #979797;
+    border-radius: 0 100px 100px 0;
+    margin-top: 40px;
+
+    .detail-top {
+      position: absolute;
+      top: -40px;
+      left: 5%;
+      height: 130%;
+      min-width: 50%;
+      max-width: 60%;
+    }
+    .detail-bottom {
+      padding-inline-start: 60%;
+      padding-right: 60px;
+    }
+    .detail-header {
+      text-align: left;
+      padding-bottom: 29px;
+    }
+  }
+  .detail-container-4 {
+    padding-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    width: $rowWidth;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    .detail-left,
+    .detail-right {
+      width: 50%;
+    }
+    .detail-left {
+      padding-right: 15px;
+    }
+    .detail-right {
+      padding-left: 15px;
+    }
+  }
+  .detail-container-5 {
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+  .detail-container-6,
+  .detail-container-8 {
+    width: $rowWidth;
+    margin: 0 auto;
+  }
+  .detail-container-6 {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    .detail-header {
+      padding-bottom: 46px;
+    }
+  }
+  .detail-container-7 {
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .detail-container-8 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+    .row-img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .detail-container-9 {
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    // .detail-img {
+    //   background-image: url("../img/wireframes\ laptop.png");
+    //   min-height: 300px;
+    // }
+  }
+  .lap {
+    display: block;
+  }
+  .mob {
+    display: none;
+  }
+}
